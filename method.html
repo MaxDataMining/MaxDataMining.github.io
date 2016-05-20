@@ -37,6 +37,22 @@ Where xi and xj are the initially-labeled/input sample and the new sample (refer
 <p align="center">Manhattan Distance: d(xi, xj) = ∑<sup>k</sup><sub>i=1</sub>|xi - xj|</p>
 
 <p align="center">Minkowski Distance: d(xi, xj) = (∑<sup>k</sup><sub>i=1</sub>(|xi - xj|)<sup>q</sup>)<sup>1/q</sup></p>
+
+<p>
+Unlike the three distances above, which are used for continuous features, categorical and binary features are calculated by the Hamming distance (Sayad, 2010). The math formula for the Hamming distance is the same as for the Manhattan distance, only it calculates values that are either 0 or 1. That is, if xi and xj are the same, then the distance is 0. If they are not the same, the distance is 1.
+</p>
+ 
+<p align="center">Hamming Distance: d(xi, xj) = ∑<sup>k</sup><sub>i=1</sub>|xi - xj|</p>
+
+<p>
+The table below is based on the table found in the <a href="http://www.saedsayad.com/k_nearest_neighbors_reg.htm">KNN section</a> of the data-mining website by Dr. Saed Sayad.
+</p>
+<p align="center"> 
+X       Y    Distance
+Male   Male     0
+Male  Female    1
+</p>
+
                                     
 <p>
 KNN is non-parametric because there is no assumption about the data is within any sort of fixed parameter. KNN is a popular algorithm to use for machine learning because it is simple and because the training time is very quick, due to the method being a lazy algorithm. That is, all the data is stored during the training phase, but the algorithm does not learn on the data until it needs to be classified. This is good for when the distribution of the data is unknown (as is the case for a lot of real-world data), or in experiments when a quick classification is needed.
