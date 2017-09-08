@@ -1,2 +1,2 @@
 # MaxDataMining.github.io
-Conatins HTML, CSS, and JS used for our website
+Conatins HTML, CSS, and JS used for our website.
